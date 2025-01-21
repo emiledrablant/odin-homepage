@@ -1,0 +1,16 @@
+
+h1, h2 {
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.main-pic {
+    width: 320px;
+}
+
+.social-btns img {
+    width: 24px;
+}

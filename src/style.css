@@ -1,16 +1,162 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 h1, h2 {
     font-family: "Playfair Display", Arial, Helvetica, sans-serif;
 }
 
-p {
-    font-family: Roboto, Arial, sans-serif;
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
 }
 
-.main-pic {
-    width: 320px;
+p {
+    font-family: Roboto, Arial, sans-serif;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+}
+
+#hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+}
+
+.img-wrapper {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    width: min(100% - 20px, 400px);
+}
+
+.img-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+h1 {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+    font-size: 2rem;
+    color: white;
+}
+
+.about-me {
+    width: min(100vw - 40px, 600px);
+    padding: 24px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    background-color: white;
+}
+
+.social-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 16px;
 }
 
 .social-btns img {
-    width: 24px;
+    width: 32px;
+}
+
+.img-wrapper::after {
+    content: "";
+    display: block;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, transparent 25%, black);
+    border-radius: 50%;
+    position: absolute;
+    top: -25%;
+    left: -25%;
+}
+
+.project p {
+    font-size: 1.2rem;
+    padding: 12px;
+}
+
+#work {
+    padding: 24px;
+}
+
+#work-wrapper {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    justify-content: center;
+    background-color: red;
+}
+
+h3 {
+    font-size: 1.8rem;
+    padding: 12px;
+    padding-bottom: 0;
+}
+
+.project {
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    max-width: 512px;
+}
+
+.project-content {
+    border: 2px solid black;
+    border-top: 0;
+    border-radius: 0 0 24px 24px;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+}
+
+@media (min-width: 800px) and (max-width: 1100px) {
+    body {
+        background-color: aquamarine;
+    }
+    #hero-container {
+        display: block;
+        justify-self: center;
+    }
+    
+    .img-wrapper {
+      width: 350px;
+      height: 350px;
+      float: left;
+      margin-right: 2rem;
+    }
+    
+    .about-me {
+      margin-top: 86px;
+      margin-left: 86px;
+      width: min(100vw - 40px, 650px);
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        background-color: green;
+    }
+
+    #hero-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    #work-wrapper {
+        flex-direction: column;
+    }
+
+    .about-me {
+      margin: 0;
+    }
 }
